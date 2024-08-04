@@ -66,6 +66,6 @@ jobs:
 
           sudo docker rm multi-module-server
 
-          sudo docker run --name multi-module-server -d -p 8080:8080 ${{ secrets.DOCKERHUB_USERNAME }}/multi-module
+          sudo docker run --name multi-module-server -d -p 8080:8080 -e TZ=Asia/Seoul ${{ secrets.DOCKERHUB_USERNAME }}/multi-module
 
           sudo docker image prune -f
