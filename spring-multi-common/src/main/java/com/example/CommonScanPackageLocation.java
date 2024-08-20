@@ -1,4 +1,4 @@
-package com.example.springmulticommon;
+package com.example;
 
 public interface CommonScanPackageLocation {
 }
