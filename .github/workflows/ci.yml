@@ -27,20 +27,15 @@ jobs:
 
       - name: make application-database.yml
         run: |
-          cd ./src/main/resources
-
+          cd spring-multi-domain/src/main/resources
           touch ./application-database.yml
-
           echo "${{ secrets.DATABASE }}" >> ./application-database.yml
-
         shell: bash
 
       - name: make test application-database.yml
         run: |
-          cd ./src/test/resources
-
+          cd spring-multi-domain/src/test/resources
           touch ./application-database.yml
-
           echo "${{ secrets.DATABASE }}" >> ./application-database.yml
         shell: bash
         
