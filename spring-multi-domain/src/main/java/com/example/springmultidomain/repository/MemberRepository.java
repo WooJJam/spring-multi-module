@@ -1,4 +1,4 @@
-package com.example.springmultidomain;
+package com.example.springmultidomain.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

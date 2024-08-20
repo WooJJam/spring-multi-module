@@ -1,9 +1,3 @@
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-}
-
 plugins {
     id 'java'
     id 'org.springframework.boot' version '3.3.2'
@@ -16,7 +10,10 @@ java {
     }
 }
 
-subprojects { // 모든 하위 모듈들에 이 설정을 적용합니다.
+bootJar { enabled = false }
+jar { enabled = true }
+
+allprojects { // 모든 하위 모듈들에 이 설정을 적용합니다.
     group 'com.example'
     version '0.0.1-SNAPSHOT'
     sourceCompatibility = '17'
@@ -53,7 +50,4 @@ subprojects { // 모든 하위 모듈들에 이 설정을 적용합니다.
     tasks.named('test') {
         useJUnitPlatform()
     }
-
-    tasks.register("prepareKotlinBuildScriptModel"){}
-
 }
