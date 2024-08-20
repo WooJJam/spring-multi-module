@@ -8,4 +8,10 @@ jar { enabled = false }
 dependencies {
     implementation project(":spring-multi-domain")
     implementation project(":spring-multi-common")
+
+    /* testcontainer */
+    testImplementation "org.junit.jupiter:junit-jupiter:5.8.1"
+    testImplementation "org.testcontainers:testcontainers:1.19.7"
+    testImplementation "org.testcontainers:junit-jupiter:1.19.7"
+    testImplementation "org.testcontainers:mysql:1.19.7"
 }

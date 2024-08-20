@@ -31,6 +31,7 @@ public class MemberTest {
 			.build();
 
 		Member findMember = memberRepository.save(member);
+		System.out.println("findMember = " + findMember);
 		Assertions.assertThat(member.getName()).isEqualTo(findMember.getName());
 	}
 }
