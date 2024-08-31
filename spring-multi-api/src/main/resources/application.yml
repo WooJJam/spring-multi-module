@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: spring-multi-api
+  profiles:
+    group:
+      local: common, domain
+      dev: common, domain
+
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev

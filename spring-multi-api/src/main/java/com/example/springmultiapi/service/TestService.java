@@ -1,5 +1,6 @@
 package com.example.springmultiapi.service;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -16,8 +17,11 @@ public class TestService {
 
     private final MemberRepository memberRepository;
 
+    @Value("${test.value}")
+    private String testValue;
+
     public String testSuccess() {
-        return ErrorCode.SUCCESS.toString();
+        return testValue;
     }
 
     @Transactional
