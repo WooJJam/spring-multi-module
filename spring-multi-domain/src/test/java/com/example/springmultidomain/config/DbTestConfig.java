@@ -1,18 +1,11 @@
-package com.example.springmultiapi.config;
+package com.example.springmultidomain.config;
 
-import org.assertj.core.api.Assertions;
-import org.junit.ClassRule;
-import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.Import;
-import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.DynamicPropertyRegistry;
 import org.springframework.test.context.DynamicPropertySource;
 import org.testcontainers.containers.MySQLContainer;
 import org.testcontainers.junit.jupiter.Testcontainers;
 import org.testcontainers.utility.DockerImageName;
-
 
 @Testcontainers
 public abstract class DbTestConfig {
