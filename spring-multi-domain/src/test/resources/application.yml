@@ -1,9 +1,9 @@
 spring:
   application:
     name: spring-multi-api
-  profiles:
-    active: dev
-#    group:ㅁ
+#  profiles:
+#    active: dev
+#    group:
 #      local: common, domain
 #      dev: common, domain
   jpa:
@@ -19,6 +19,11 @@ spring:
     init:
       mode: always
 
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
+    url: ${DATABASE_URL}
 
 ---
 spring:

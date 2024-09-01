@@ -6,12 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import com.example.springmultiapi.SpringMultiApiApplication;
-import com.example.springmultiapi.config.DbTestConfig;
 import com.example.springmultidomain.domain.Member;
-import com.example.springmultidomain.repository.MemberRepository;
 
 @SpringBootTest(classes = SpringMultiApiApplication.class)
-class TestServiceTest extends DbTestConfig {
+class TestServiceTest {
 
 	@Autowired
 	TestService testService;

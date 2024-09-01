@@ -28,12 +28,19 @@ jobs:
       - name: make application-database.yml
         run: |
           cd spring-multi-domain/src/main/resources
-          touch ./application-database.yml
-          echo "${{ secrets.DATABASE }}" >> ./application-database.yml
+          touch ./application-dev.yml
+          echo "${{ secrets.DATABASE }}" >> ./application-dev.yml
+        shell: bash
+
+      - name: make test application-database.yml
+        run: |
+          cd spring-multi-domain/src/test/resources
+          touch ./application-dev.yml
+          echo "${{ secrets.DATABASE }}" >> ./application-dev.yml
         shell: bash
         
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@417ae3ccd767c252f5661f1ace9f835f9654f2b5 # v3.1.0
 
       - name: Build with Gradle Wrapper
-        run: ./gradlew build
+        run: ./gradlew clean build test

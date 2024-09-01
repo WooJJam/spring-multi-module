@@ -1,4 +1,4 @@
-package com.example;
+package com.example.springmultidomain;
 
 public interface RepoConfig {
 }

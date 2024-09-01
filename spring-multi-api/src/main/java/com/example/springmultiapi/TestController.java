@@ -17,10 +17,10 @@ public class TestController {
     private final TestService testService;
     private final CommonService commonService;
 
-    @GetMapping("/test")
-    public String testSuccess() {
-        return testService.testSuccess();
-    }
+    // @GetMapping("/test")
+    // public String testSuccess() {
+    //     return testService.testSuccess();
+    // }
 
     @PostMapping("/test")
     public Member saveTest() {

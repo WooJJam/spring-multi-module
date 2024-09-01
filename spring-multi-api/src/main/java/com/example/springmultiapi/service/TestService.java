@@ -17,12 +17,9 @@ public class TestService {
 
     private final MemberRepository memberRepository;
 
-    @Value("${test.value}")
-    private String testValue;
-
-    public String testSuccess() {
-        return testValue;
-    }
+    // public String testSuccess() {
+    //     return testValue;
+    // }
 
     @Transactional
     public Member memberTest(String name, String password) {
