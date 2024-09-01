@@ -16,6 +16,8 @@ import lombok.RequiredArgsConstructor;
 public class TestService {
 
     private final MemberRepository memberRepository;
+    @Value("${test.admin}")
+    private String admin;
 
     // public String testSuccess() {
     //     return testValue;
@@ -23,6 +25,7 @@ public class TestService {
 
     @Transactional
     public Member memberTest(String name, String password) {
+        System.out.println("admin = " + admin);
         Member member = Member.builder()
             .name(name)
             .password(password)
