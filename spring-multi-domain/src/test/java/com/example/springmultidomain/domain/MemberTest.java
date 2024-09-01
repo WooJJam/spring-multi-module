@@ -9,8 +9,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import com.example.springmultidomain.config.DbTestConfig;
 import com.example.springmultidomain.repository.MemberRepository;
 
-
-@DataJpaTest
+@DataJpaTest(properties = {"spring.jpa.hibernate.ddl-auto=create"})
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 public class MemberTest extends DbTestConfig {
 

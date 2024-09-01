@@ -1,0 +1,26 @@
+admin:
+  id: admin!
+
+spring:
+  profiles:
+    active: dev
+    group:
+      dev: common
+      local: common
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+---
+spring:
+  config:
+    activate:
+      on-profile: test

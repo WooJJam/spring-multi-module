@@ -3,9 +3,10 @@ spring:
     name: spring-multi-api
   profiles:
     active: dev
-#    group:ㅁ
-#      local: common, domain
-#      dev: common, domain
+    group:
+      dev: common
+      local: common
+
   jpa:
     hibernate:
       ddl-auto: create
@@ -19,6 +20,13 @@ spring:
     init:
       mode: always
 
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
+    url: ${DATABASE_URL}
+test:
+  admin: 1234
 
 ---
 spring:
