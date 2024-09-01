@@ -23,4 +23,11 @@ class TestServiceTest extends DbTestConfig {
 		System.out.println("member = " + member);
 		Assertions.assertThat(member.getName()).isEqualTo("우잼");
 	}
+
+	@Test
+	public void getAdmin() throws Exception {
+		String admin = testService.getAdmin();
+		System.out.println("admin = " + admin);
+		Assertions.assertThat(testService.getAdmin()).isEqualTo("admin1234");
+	}
 }

@@ -25,8 +25,6 @@ spring:
     username: ${DATABASE_USERNAME}
     password: ${DATABASE_PASSWORD}
     url: ${DATABASE_URL}
-test:
-  admin: ${ADMIN}
 
 ---
 spring:

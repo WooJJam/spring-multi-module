@@ -32,4 +32,8 @@ public class TestService {
             .build();
         return memberRepository.save(member);
     }
+
+    public String getAdmin() {
+        return admin;
+    }
 }
