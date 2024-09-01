@@ -20,13 +20,13 @@ jobs:
         distribution: 'temurin'
 
 
-    - name: make application-database.yml
+    - name: make application-dev.yml
       run: |
-        cd spring-multi-domain/src/main/resources
+        cd spring-multi-api/src/main/resources
 
-         touch ./application-database.yml
+         touch ./application-dev.yml
 
-         echo "${{ secrets.DATABASE }}" >> ./application-database.yml
+         echo "${{ secrets.DEV }}" >> ./application-dev.yml
 
       shell: bash
     

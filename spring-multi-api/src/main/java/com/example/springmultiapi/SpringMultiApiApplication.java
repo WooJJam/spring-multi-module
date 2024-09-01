@@ -4,12 +4,13 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
-import com.example.springmulticommon.CommonScanPackageLocation;
+import com.example.CommonScanPackageLocation;
 
 @EntityScan("com.example")
 @SpringBootApplication(
-	scanBasePackageClasses = CommonScanPackageLocation.class
+	scanBasePackageClasses = {CommonScanPackageLocation.class}
 )
+// @EnableJpaRepositories(basePackageClasses = RepoConfig.class)
 public class SpringMultiApiApplication {
 
 	public static void main(String[] args) {
